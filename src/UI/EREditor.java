@@ -57,8 +57,8 @@ public class EREditor extends JFrame {
     /* Drawing options */
     private int fCurrentDrawObject = Constants.kEdit;
     private boolean fIntelligentDraw = true;
-    private boolean fSmoothDraw = false;
-    private boolean fColoredDraw = false;
+    private boolean fSmoothDraw = true;
+    private boolean fColoredDraw = true;
 
 
     /* Load an icon from a resource or file name.
