@@ -60,13 +60,20 @@ public class EREditor extends JFrame {
     private boolean fSmoothDraw = false;
     private boolean fColoredDraw = false;
 
+
+    /* Load an icon from a resource or file name.
+     */
+    private ImageIcon loadIcon(String name) {
+        return new ImageIcon(this.getClass().getResource("/" + name));
+    }
+
     /**
      * Constructor
      */
     public EREditor() {
         super("ER-Editor 2.0");
         setLocation(200, 200);
-        setIconImage(new ImageIcon("Images/icon.gif").getImage());
+        setIconImage(loadIcon("Images/icon.gif").getImage());
         getContentPane().setLayout(new BorderLayout());
 
     /* Set up the file boxes (for saving, exporting, opening) */
@@ -355,7 +362,7 @@ public class EREditor extends JFrame {
      */
     class FileNewAction extends AbstractAction {
         public FileNewAction() {
-            super("New...", new ImageIcon("Images/new.gif"));
+            super("New...", loadIcon("Images/new.gif"));
         }
 
         public void actionPerformed(ActionEvent event) {
@@ -368,7 +375,7 @@ public class EREditor extends JFrame {
      */
     class FileOpenAction extends AbstractAction {
         public FileOpenAction() {
-            super("Open...", new ImageIcon("Images/open.gif"));
+            super("Open...", loadIcon("Images/open.gif"));
         }
 
         public void actionPerformed(ActionEvent event) {
@@ -381,7 +388,7 @@ public class EREditor extends JFrame {
      */
     class FileSaveAction extends AbstractAction {
         public FileSaveAction() {
-            super("Save", new ImageIcon("Images/save.gif"));
+            super("Save", loadIcon("Images/save.gif"));
         }
 
         public void actionPerformed(ActionEvent event) {
@@ -398,7 +405,7 @@ public class EREditor extends JFrame {
      */
     class FileSaveAsAction extends AbstractAction {
         public FileSaveAsAction() {
-            super("Save As...", new ImageIcon("Images/save.gif"));
+            super("Save As...", loadIcon("Images/save.gif"));
         }
 
         public void actionPerformed(ActionEvent event) {
@@ -468,7 +475,7 @@ public class EREditor extends JFrame {
      */
     class EditUndoAction extends AbstractAction {
         public EditUndoAction() {
-            super("Undo", new ImageIcon("Images/undo.gif"));
+            super("Undo", loadIcon("Images/undo.gif"));
         }
 
         public void actionPerformed(ActionEvent event) {
@@ -482,7 +489,7 @@ public class EREditor extends JFrame {
      */
     class EditRedoAction extends AbstractAction {
         public EditRedoAction() {
-            super("Redo", new ImageIcon("Images/redo.gif"));
+            super("Redo", loadIcon("Images/redo.gif"));
         }
 
         public void actionPerformed(ActionEvent event) {
@@ -496,7 +503,7 @@ public class EREditor extends JFrame {
      */
     class EditDeleteAction extends AbstractAction {
         public EditDeleteAction() {
-            super("Delete", new ImageIcon("delete.gif"));
+            super("Delete", loadIcon("Images/delete.gif"));
         }
 
         public void actionPerformed(ActionEvent event) {
@@ -552,7 +559,7 @@ public class EREditor extends JFrame {
      */
     class DrawEditAction extends AbstractAction {
         public DrawEditAction() {
-            super("Edit", new ImageIcon("Images/edit.gif"));
+            super("Edit", loadIcon("Images/edit.gif"));
         }
 
         public void actionPerformed(ActionEvent event) {
@@ -567,7 +574,7 @@ public class EREditor extends JFrame {
      */
     class DrawEntityAction extends AbstractAction {
         public DrawEntityAction() {
-            super("Entity", new ImageIcon("Images/entity.gif"));
+            super("Entity", loadIcon("Images/entity.gif"));
         }
 
         public void actionPerformed(ActionEvent event) {
@@ -582,7 +589,7 @@ public class EREditor extends JFrame {
      */
     class DrawAttributeAction extends AbstractAction {
         public DrawAttributeAction() {
-            super("Attribute", new ImageIcon("Images/attribute.gif"));
+            super("Attribute", loadIcon("Images/attribute.gif"));
         }
 
         public void actionPerformed(ActionEvent event) {
@@ -597,7 +604,7 @@ public class EREditor extends JFrame {
      */
     class DrawRelationshipAction extends AbstractAction {
         public DrawRelationshipAction() {
-            super("Relationship", new ImageIcon("Images/relationship.gif"));
+            super("Relationship", loadIcon("Images/relationship.gif"));
         }
 
         public void actionPerformed(ActionEvent event) {
@@ -612,7 +619,7 @@ public class EREditor extends JFrame {
      */
     class DrawISAAction extends AbstractAction {
         public DrawISAAction() {
-            super("ISA Relationship", new ImageIcon("Images/isa.gif"));
+            super("ISA Relationship", loadIcon("Images/isa.gif"));
         }
 
         public void actionPerformed(ActionEvent event) {
@@ -627,7 +634,7 @@ public class EREditor extends JFrame {
      */
     class DrawLineAction extends AbstractAction {
         public DrawLineAction() {
-            super("Line", new ImageIcon("Images/line.gif"));
+            super("Line", loadIcon("Images/line.gif"));
         }
 
         public void actionPerformed(ActionEvent event) {
@@ -641,7 +648,7 @@ public class EREditor extends JFrame {
      */
     class ExtraCheckAction extends AbstractAction {
         public ExtraCheckAction() {
-            super("Check Model", new ImageIcon("Images/check.gif"));
+            super("Check Model", loadIcon("Images/check.gif"));
         }
 
         public void actionPerformed(ActionEvent event) {
@@ -659,7 +666,7 @@ public class EREditor extends JFrame {
      */
     class ExtraMapAction extends AbstractAction {
         public ExtraMapAction() {
-            super("Map Model...", new ImageIcon("Images/map.gif"));
+            super("Map Model...", loadIcon("Images/map.gif"));
         }
 
         public void actionPerformed(ActionEvent event) {
@@ -680,7 +687,7 @@ public class EREditor extends JFrame {
      */
     class ExtraSQLAction extends AbstractAction {
         public ExtraSQLAction() {
-            super("Generate SQL Code...", new ImageIcon("Images/sql.gif"));
+            super("Generate SQL Code...", loadIcon("Images/sql.gif"));
         }
 
         public void actionPerformed(ActionEvent event) {
@@ -743,7 +750,7 @@ public class EREditor extends JFrame {
      */
     class HelpHelpAction extends AbstractAction {
         public HelpHelpAction() {
-            super("Help...", new ImageIcon("Images/help.gif"));
+            super("Help...", loadIcon("Images/help.gif"));
         }
 
         public void actionPerformed(ActionEvent event) {
@@ -757,7 +764,7 @@ public class EREditor extends JFrame {
      */
     class HelpAboutAction extends AbstractAction {
         public HelpAboutAction() {
-            super("About...", new ImageIcon("Images/about.gif"));
+            super("About...", loadIcon("Images/about.gif"));
         }
 
         public void actionPerformed(ActionEvent event) {
