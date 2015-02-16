@@ -5,7 +5,7 @@ This is a fork of the original ER Editor by Gert Helsen [published here](https:/
 ### Changes from the original version:
 
  * can run as a standalone .jar file
- * more pleasant UI: enables colors and smoothing by default
+ * more pleasant UI: enables colors and smoothing by default, uses [Nimbus](http://docs.oracle.com/javase/tutorial/uiswing/lookandfeel/nimbus.html) Look and Feel if possible
  
 ## License
 

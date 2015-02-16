@@ -71,7 +71,7 @@ public class EREditor extends JFrame {
      * Constructor
      */
     public EREditor() {
-        super("ER-Editor 2.0");
+        super("ER-Editor 2.0a");
         setLocation(200, 200);
         setIconImage(loadIcon("Images/icon.gif").getImage());
         getContentPane().setLayout(new BorderLayout());
@@ -677,7 +677,7 @@ public class EREditor extends JFrame {
             } else {
                 MapPanel mapPanel = new MapPanel();
                 mapPanel.print(fCurrentDiagram.getDiagram().getMapping());
-                mapPanel.show();
+                mapPanel.setVisible(true);
             }
         }
     }
@@ -698,7 +698,7 @@ public class EREditor extends JFrame {
             } else {
                 String sql = fCurrentDiagram.getDiagram().getSQL();
                 SQLPanel sqlPanel = new SQLPanel(sql);
-                sqlPanel.show();
+                sqlPanel.setVisible(true);
             }
         }
     }
@@ -768,8 +768,8 @@ public class EREditor extends JFrame {
         }
 
         public void actionPerformed(ActionEvent event) {
-            String msg = "ER-Editor Copyright 2002-2003\nAuthor: Gert Helsen (gerthelsen@pandora.be)";
-            JOptionPane.showMessageDialog((Component) event.getSource(), msg, "About ER-Editor: version 2.0", JOptionPane.INFORMATION_MESSAGE);
+            String msg = "ER-Editor Copyright 2002-2003, 2015\nOriginal author: Gert Helsen (gerthelsen@pandora.be)\nSmall enhancements: Christoph Langguth (christoph.langguth@unibas.ch)";
+            JOptionPane.showMessageDialog((Component) event.getSource(), msg, "About ER-Editor: version 2.0a", JOptionPane.INFORMATION_MESSAGE);
         }
     }
 
